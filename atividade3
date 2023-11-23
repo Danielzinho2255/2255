@@ -1,0 +1,35 @@
+// MeuComponenteComBotao.js
+import React, { useState } from 'react';
+
+const MeuComponenteComBotao = () => {
+  // Definindo o estado inicial da propriedade
+  const [contador, setContador] = useState(0);
+
+  // Função para incrementar a propriedade
+  const incrementarContador = () => {
+    setContador(contador + 1);
+  };
+
+  return (
+    <div>
+      <p>Valor do Contador: {contador}</p>
+      <button onClick={incrementarContador}>Incrementar</button>
+    </div>
+  );
+};
+
+export default MeuComponenteComBotao;
+// AlgumaOutraParteDoApp.js
+import React from 'react';
+import MeuComponenteComBotao from './MeuComponenteComBotao';
+
+const AlgumaOutraParteDoApp = () => {
+  return (
+    <div>
+      <h1>Meu App React</h1>
+      <MeuComponenteComBotao />
+    </div>
+  );
+};
+
+export default AlgumaOutraParteDoApp;
